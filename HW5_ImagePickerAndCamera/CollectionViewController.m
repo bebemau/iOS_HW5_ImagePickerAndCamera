@@ -12,7 +12,7 @@
 #import "CheckInData.h"
 
 @interface CollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property CheckInData *checkInData;
+
 @end
 
 @implementation CollectionViewController
@@ -21,8 +21,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _checkInData = [[CheckInData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,10 +53,7 @@ static NSString * const reuseIdentifier = @"Cell";
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    
-    
     cell.imageView.image = _checkInData.pictures[indexPath.row];
-    
     
     return cell;
 }

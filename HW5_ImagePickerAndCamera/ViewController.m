@@ -8,9 +8,10 @@
 
 #import "ViewController.h"
 #import "CollectionViewController.h"
+#import "CheckInData.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-
+@property CheckInData *checkinData;
 @end
 
 @implementation ViewController
@@ -18,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.checkinData = [[CheckInData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +33,7 @@
     
     UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
     CollectionViewController *collectionViewController = (CollectionViewController *)navigationController.topViewController;
-    
+    collectionViewController.checkInData = self.checkinData;
 }
 
 @end

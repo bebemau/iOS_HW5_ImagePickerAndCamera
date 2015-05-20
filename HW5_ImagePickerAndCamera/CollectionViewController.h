@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CheckInData.h"
 
 @interface CollectionViewController : UICollectionViewController
-
+@property CheckInData *checkInData;
 @end
