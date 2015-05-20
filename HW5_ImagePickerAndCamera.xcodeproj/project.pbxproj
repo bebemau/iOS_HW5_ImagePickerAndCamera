@@ -14,6 +14,7 @@
 		25BD05601B043D19008CFD03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25BD055F1B043D19008CFD03 /* Images.xcassets */; };
 		25BD05631B043D19008CFD03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BD05611B043D19008CFD03 /* LaunchScreen.xib */; };
 		25BD056F1B043D19008CFD03 /* HW5_ImagePickerAndCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD056E1B043D19008CFD03 /* HW5_ImagePickerAndCameraTests.m */; };
+		25BD057A1B0AFEB3008CFD03 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD05791B0AFEB3008CFD03 /* CollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		25BD05681B043D19008CFD03 /* HW5_ImagePickerAndCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HW5_ImagePickerAndCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BD056D1B043D19008CFD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25BD056E1B043D19008CFD03 /* HW5_ImagePickerAndCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HW5_ImagePickerAndCameraTests.m; sourceTree = "<group>"; };
+		25BD05781B0AFEB3008CFD03 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		25BD05791B0AFEB3008CFD03 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				25BD05571B043D19008CFD03 /* AppDelegate.m */,
 				25BD05591B043D19008CFD03 /* ViewController.h */,
 				25BD055A1B043D19008CFD03 /* ViewController.m */,
+				25BD05781B0AFEB3008CFD03 /* CollectionViewController.h */,
+				25BD05791B0AFEB3008CFD03 /* CollectionViewController.m */,
 				25BD055C1B043D19008CFD03 /* Main.storyboard */,
 				25BD055F1B043D19008CFD03 /* Images.xcassets */,
 				25BD05611B043D19008CFD03 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25BD057A1B0AFEB3008CFD03 /* CollectionViewController.m in Sources */,
 				25BD055B1B043D19008CFD03 /* ViewController.m in Sources */,
 				25BD05581B043D19008CFD03 /* AppDelegate.m in Sources */,
 				25BD05551B043D18008CFD03 /* main.m in Sources */,
@@ -414,6 +420,7 @@
 				25BD05741B043D19008CFD03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25BD05751B043D19008CFD03 /* Build configuration list for PBXNativeTarget "HW5_ImagePickerAndCameraTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				25BD05771B043D19008CFD03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
