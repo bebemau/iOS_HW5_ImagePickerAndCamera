@@ -8,9 +8,11 @@
 
 #import "CollectionViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "CollectionViewCell.h"
+#import "CheckInData.h"
 
 @interface CollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-
+@property CheckInData *checkInData;
 @end
 
 @implementation CollectionViewController
@@ -20,13 +22,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+    _checkInData = [[CheckInData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,13 +48,17 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return _checkInData.pictures.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    
+    
+    cell.imageView = _checkInData.pictures[indexPath.row];
+    
     
     return cell;
 }
@@ -128,4 +128,14 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    UIImage *pickedImage = info[UIImagePickerControllerOriginalImage];
+    [_checkInData AddPictures:pickedImage];
+    [self.collectionView reloadData];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

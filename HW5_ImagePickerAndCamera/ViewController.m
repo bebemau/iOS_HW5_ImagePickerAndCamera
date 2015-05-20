@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <MobileCoreServices/MobileCoreServices.h>
 #import "CollectionViewController.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>

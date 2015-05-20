@@ -1,13 +1,16 @@
 //
-//  CollectionViewCell.h
+//  CheckInData.h
 //  HW5_ImagePickerAndCamera
 //
 //  Created by Man, Keren on 5/19/15.
 //  Copyright (c) 2015 Man, Keren. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface CollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@interface CheckInData : NSObject
+@property NSMutableArray *pictures;
+-(void)AddPictures:(UIImage*)image;
+
 @end
