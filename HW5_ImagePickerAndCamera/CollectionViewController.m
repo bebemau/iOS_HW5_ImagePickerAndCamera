@@ -57,7 +57,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     
-    cell.imageView = _checkInData.pictures[indexPath.row];
+    cell.imageView.image = _checkInData.pictures[indexPath.row];
     
     
     return cell;
