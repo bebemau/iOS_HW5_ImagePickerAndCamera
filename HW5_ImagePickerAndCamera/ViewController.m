@@ -26,13 +26,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (IBAction)ShowPhotoList_tapped:(id)sender {
-//    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-//    CollectionViewController *collectionVC = [[CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
-//    
-//    [self presentViewController:collectionVC animated:YES completion:nil];
-//}
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     [super prepareForSegue:segue sender:sender];

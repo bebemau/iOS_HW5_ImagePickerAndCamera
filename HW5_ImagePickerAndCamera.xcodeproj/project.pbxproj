@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25BC8E4B1B0C2231003F3472 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */; };
 		25BD05551B043D18008CFD03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD05541B043D18008CFD03 /* main.m */; };
 		25BD05581B043D19008CFD03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD05571B043D19008CFD03 /* AppDelegate.m */; };
 		25BD055B1B043D19008CFD03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD055A1B043D19008CFD03 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25BC8E491B0C2231003F3472 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		25BD054F1B043D18008CFD03 /* HW5_ImagePickerAndCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW5_ImagePickerAndCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BD05531B043D18008CFD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25BD05541B043D18008CFD03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				25BD05781B0AFEB3008CFD03 /* CollectionViewController.h */,
 				25BD05791B0AFEB3008CFD03 /* CollectionViewController.m */,
 				25BD055C1B043D19008CFD03 /* Main.storyboard */,
+				25BC8E491B0C2231003F3472 /* CollectionViewCell.h */,
+				25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */,
 				25BD055F1B043D19008CFD03 /* Images.xcassets */,
 				25BD05611B043D19008CFD03 /* LaunchScreen.xib */,
 				25BD05521B043D18008CFD03 /* Supporting Files */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25BD057A1B0AFEB3008CFD03 /* CollectionViewController.m in Sources */,
+				25BC8E4B1B0C2231003F3472 /* CollectionViewCell.m in Sources */,
 				25BD055B1B043D19008CFD03 /* ViewController.m in Sources */,
 				25BD05581B043D19008CFD03 /* AppDelegate.m in Sources */,
 				25BD05551B043D18008CFD03 /* main.m in Sources */,

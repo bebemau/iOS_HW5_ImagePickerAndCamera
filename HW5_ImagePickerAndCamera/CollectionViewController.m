@@ -7,8 +7,9 @@
 //
 
 #import "CollectionViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface CollectionViewController ()
+@interface CollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -23,7 +24,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -93,4 +94,38 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+- (IBAction)btnCancel_tapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)btnCamera_tapped:(id)sender {
+    BOOL isCamerAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    BOOL isPhotoLibraryAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary];
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    
+    if (isCamerAvailable) {
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Camera" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [self _showImagePickerWithSourceType:UIImagePickerControllerSourceTypeCamera];}]];
+    }
+    
+    if (isPhotoLibraryAvailable) {
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Photo Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [self _showImagePickerWithSourceType:UIImagePickerControllerSourceTypePhotoLibrary];}]];
+    }
+    
+    [self showDetailViewController:alertController sender:sender];
+}
+
+-(void)_showImagePickerWithSourceType:(UIImagePickerControllerSourceType)sourceType{
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    imagePicker.sourceType = sourceType;
+    imagePicker.mediaTypes = @[(NSString *)kUTTypeImage];
+    imagePicker.delegate = self;
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
 @end
