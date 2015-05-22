@@ -10,22 +10,28 @@
 #import "CollectionViewController.h"
 #import "CheckInData.h"
 
-@interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, CollectionViewControllerDelegate>
 @property CheckInData *checkinData;
+@property (nonatomic, strong) NSMutableArray *checkinDataList;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.checkinData = [[CheckInData alloc] init];
+    
+    NSURL *saveFileURL = [self GetSaveFileUrl];
+    self.checkinDataList = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithFile:[saveFileURL path]];
+    
+    if(self.checkinDataList == nil){
+        self.checkinData = [[CheckInData alloc] init];
+        self.checkinDataList = [[NSMutableArray alloc] init];
+        [self.checkinDataList addObject:self.checkinData];
+    }
+    else
+        self.checkinData = self.checkinDataList[0];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
@@ -34,6 +40,25 @@
     UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
     CollectionViewController *collectionViewController = (CollectionViewController *)navigationController.topViewController;
     collectionViewController.checkInData = self.checkinData;
+    collectionViewController.delegate = self;
+}
+
+
+-(NSURL*)GetSaveFileUrl{
+    NSFileManager *defaultFileManager = [NSFileManager defaultManager];
+    NSArray *possibleURLs = [defaultFileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    NSURL *documentsDirURL = [possibleURLs firstObject];
+    
+    NSURL *saveFileURL = [documentsDirURL URLByAppendingPathComponent:@"checkinData.bin"];
+    return saveFileURL;
+}
+
+
+-(void)collectionViewControllerImagesSelected:(CollectionViewController *)vc imagesSelected:(NSArray *)images{
+    NSURL *saveFileURL = [self GetSaveFileUrl];
+    self.checkinData.pictures = [images mutableCopy];
+    
+    [NSKeyedArchiver archiveRootObject:self.checkinDataList toFile:[saveFileURL path]];
 }
 
 @end

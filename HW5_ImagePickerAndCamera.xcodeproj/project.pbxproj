@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		25BC8E4B1B0C2231003F3472 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */; };
 		25BC8E4E1B0C2D82003F3472 /* CheckInData.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8E4D1B0C2D82003F3472 /* CheckInData.m */; };
+		25BC8E501B0EED96003F3472 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BC8E4F1B0EED96003F3472 /* CoreLocation.framework */; };
+		25BC8E531B0EF464003F3472 /* FindLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8E521B0EF464003F3472 /* FindLocationViewController.m */; };
 		25BD05551B043D18008CFD03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD05541B043D18008CFD03 /* main.m */; };
 		25BD05581B043D19008CFD03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD05571B043D19008CFD03 /* AppDelegate.m */; };
 		25BD055B1B043D19008CFD03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BD055A1B043D19008CFD03 /* ViewController.m */; };
@@ -34,6 +36,9 @@
 		25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		25BC8E4C1B0C2D82003F3472 /* CheckInData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInData.h; sourceTree = "<group>"; };
 		25BC8E4D1B0C2D82003F3472 /* CheckInData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInData.m; sourceTree = "<group>"; };
+		25BC8E4F1B0EED96003F3472 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		25BC8E511B0EF464003F3472 /* FindLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindLocationViewController.h; sourceTree = "<group>"; };
+		25BC8E521B0EF464003F3472 /* FindLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindLocationViewController.m; sourceTree = "<group>"; };
 		25BD054F1B043D18008CFD03 /* HW5_ImagePickerAndCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW5_ImagePickerAndCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BD05531B043D18008CFD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25BD05541B043D18008CFD03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25BC8E501B0EED96003F3472 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +78,7 @@
 		25BD05461B043D18008CFD03 = {
 			isa = PBXGroup;
 			children = (
+				25BC8E4F1B0EED96003F3472 /* CoreLocation.framework */,
 				25BD05511B043D18008CFD03 /* HW5_ImagePickerAndCamera */,
 				25BD056B1B043D19008CFD03 /* HW5_ImagePickerAndCameraTests */,
 				25BD05501B043D18008CFD03 /* Products */,
@@ -97,6 +104,8 @@
 				25BD05781B0AFEB3008CFD03 /* CollectionViewController.h */,
 				25BD05791B0AFEB3008CFD03 /* CollectionViewController.m */,
 				25BD055C1B043D19008CFD03 /* Main.storyboard */,
+				25BC8E511B0EF464003F3472 /* FindLocationViewController.h */,
+				25BC8E521B0EF464003F3472 /* FindLocationViewController.m */,
 				25BC8E491B0C2231003F3472 /* CollectionViewCell.h */,
 				25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */,
 				25BD055F1B043D19008CFD03 /* Images.xcassets */,
@@ -237,6 +246,7 @@
 				25BD057A1B0AFEB3008CFD03 /* CollectionViewController.m in Sources */,
 				25BC8E4E1B0C2D82003F3472 /* CheckInData.m in Sources */,
 				25BC8E4B1B0C2231003F3472 /* CollectionViewCell.m in Sources */,
+				25BC8E531B0EF464003F3472 /* FindLocationViewController.m in Sources */,
 				25BD055B1B043D19008CFD03 /* ViewController.m in Sources */,
 				25BD05581B043D19008CFD03 /* AppDelegate.m in Sources */,
 				25BD05551B043D18008CFD03 /* main.m in Sources */,

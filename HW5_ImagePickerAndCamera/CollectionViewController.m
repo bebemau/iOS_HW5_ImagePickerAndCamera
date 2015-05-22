@@ -90,6 +90,9 @@ static NSString * const reuseIdentifier = @"Cell";
 */
 
 - (IBAction)btnCancel_tapped:(id)sender {
+    if(_checkInData.pictures.count > 0){
+        [self.delegate collectionViewControllerImagesSelected:self imagesSelected: _checkInData.pictures];
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

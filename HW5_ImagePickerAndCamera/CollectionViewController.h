@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "CheckInData.h"
 
+@class CollectionViewController;
+
+@protocol CollectionViewControllerDelegate <NSObject>
+
+- (void)collectionViewControllerImagesSelected:(CollectionViewController *)vc imagesSelected:(NSArray *)images;
+
+@end
+
 @interface CollectionViewController : UICollectionViewController
 @property CheckInData *checkInData;
+@property (nonatomic, weak) id<CollectionViewControllerDelegate>delegate;
 @end

@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface CheckInData : NSObject
+@interface CheckInData : NSObject <NSCoding>
+
 @property NSMutableArray *pictures;
 -(void)AddPictures:(UIImage*)image;
 

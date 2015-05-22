@@ -17,4 +17,22 @@
     [self.pictures addObject:image];
 }
 
+#pragma mark - NSCoding
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    
+    if (!self) {
+        return nil;
+    }
+    
+    self.pictures = [aDecoder decodeObjectForKey:@"pictures"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:self.pictures forKey:@"pictures"];
+}
+
 @end
