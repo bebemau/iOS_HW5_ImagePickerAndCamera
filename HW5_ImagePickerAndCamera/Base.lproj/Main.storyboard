@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CJz-42-B6I">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Collection View Controller-->
@@ -83,6 +84,7 @@
             <objects>
                 <tableViewController id="LnF-WB-BkD" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AdZ-fh-efp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -119,8 +121,33 @@
                         <viewControllerLayoutGuide type="bottom" id="zsR-9w-5Ve"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fYX-QY-TqN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b3s-pa-PPI">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npI-X8-RkD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="32"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b3s-pa-PPI" firstAttribute="leading" secondItem="fYX-QY-TqN" secondAttribute="leadingMargin" constant="-16" id="3kn-ki-VLu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="b3s-pa-PPI" secondAttribute="bottom" id="5m3-TV-qd7"/>
+                            <constraint firstItem="npI-X8-RkD" firstAttribute="leading" secondItem="fYX-QY-TqN" secondAttribute="leadingMargin" constant="-16" id="B2K-4b-djq"/>
+                            <constraint firstItem="npI-X8-RkD" firstAttribute="top" secondItem="5b1-Vu-QpJ" secondAttribute="bottom" id="Dmq-Tq-tbg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="npI-X8-RkD" secondAttribute="trailing" constant="-16" id="VIv-Vy-SSi"/>
+                            <constraint firstItem="b3s-pa-PPI" firstAttribute="top" secondItem="5b1-Vu-QpJ" secondAttribute="bottom" constant="32" id="eOi-yZ-wnc"/>
+                            <constraint firstItem="b3s-pa-PPI" firstAttribute="top" secondItem="npI-X8-RkD" secondAttribute="bottom" id="pQu-zd-THv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b3s-pa-PPI" secondAttribute="trailing" constant="-16" id="tFM-ch-617"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pQu-zd-THv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Find Location" id="Ff7-aD-QYX">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Joj-IS-wb0">
@@ -129,10 +156,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="b3s-pa-PPI" id="Z6S-xw-bai"/>
+                        <outlet property="searchBar" destination="npI-X8-RkD" id="J0i-9f-eaq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gN-U3-XuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2532" y="196.5"/>
+            <point key="canvasLocation" x="2532" y="196"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aap-rb-fGO">
