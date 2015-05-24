@@ -158,7 +158,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="b3s-pa-PPI" id="Z6S-xw-bai"/>
-                        <outlet property="searchBar" destination="npI-X8-RkD" id="J0i-9f-eaq"/>
+                        <outlet property="searchBar" destination="npI-X8-RkD" id="doY-ix-w6H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gN-U3-XuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
