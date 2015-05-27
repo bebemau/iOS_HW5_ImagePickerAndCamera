@@ -9,6 +9,8 @@
 #import "FindLocationViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "CheckinDataList.h"
+#import "CheckInData.h"
 
 @interface FindLocationViewController ()<CLLocationManagerDelegate, MKMapViewDelegate, UISearchBarDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -99,12 +101,14 @@
 }
 
 -(void)Checkin_Tapped{
-    NSLog(@"blah");
+    
+    [self.delegate findLocationViewControllerPlaceSelected:self placeName:self.searchBar.text];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
-    NSLog(@"%@", view.annotation.title);
-}
+//- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+//    NSLog(@"%@", view.annotation.title);
+//}
 
 
 - (IBAction)btnCancel_tapped:(id)sender {

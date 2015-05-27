@@ -27,12 +27,14 @@
     }
     
     self.pictures = [aDecoder decodeObjectForKey:@"pictures"];
+    self.placeName = [aDecoder decodeObjectForKey:@"placeName"];
     
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.pictures forKey:@"pictures"];
+    [aCoder encodeObject:self.placeName forKey:@"placeName"];
 }
 
 @end

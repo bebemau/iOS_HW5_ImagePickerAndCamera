@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindLocationViewController : UIViewController
+@class FindLocationViewController;
 
+@protocol FindLocationViewControllerDelegate <NSObject>
+
+- (void)findLocationViewControllerPlaceSelected:(FindLocationViewController *)vc placeName:(NSString *)name;
+
+@end
+
+@interface FindLocationViewController : UIViewController
+@property (nonatomic, weak) id<FindLocationViewControllerDelegate>delegate;
 @end

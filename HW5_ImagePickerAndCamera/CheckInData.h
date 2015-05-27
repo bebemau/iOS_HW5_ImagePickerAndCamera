@@ -12,6 +12,8 @@
 @interface CheckInData : NSObject <NSCoding>
 
 @property NSMutableArray *pictures;
+@property NSString *placeName;
+
 -(void)AddPictures:(UIImage*)image;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252251891B156A28008E00F0 /* CheckinDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = 252251881B156A28008E00F0 /* CheckinDataList.m */; };
 		25BC8E4B1B0C2231003F3472 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */; };
 		25BC8E4E1B0C2D82003F3472 /* CheckInData.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8E4D1B0C2D82003F3472 /* CheckInData.m */; };
 		25BC8E501B0EED96003F3472 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BC8E4F1B0EED96003F3472 /* CoreLocation.framework */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		252251871B156A28008E00F0 /* CheckinDataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinDataList.h; sourceTree = "<group>"; };
+		252251881B156A28008E00F0 /* CheckinDataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinDataList.m; sourceTree = "<group>"; };
 		25BC8E491B0C2231003F3472 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		25BC8E4A1B0C2231003F3472 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		25BC8E4C1B0C2D82003F3472 /* CheckInData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInData.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				25BD05521B043D18008CFD03 /* Supporting Files */,
 				25BC8E4C1B0C2D82003F3472 /* CheckInData.h */,
 				25BC8E4D1B0C2D82003F3472 /* CheckInData.m */,
+				252251871B156A28008E00F0 /* CheckinDataList.h */,
+				252251881B156A28008E00F0 /* CheckinDataList.m */,
 			);
 			path = HW5_ImagePickerAndCamera;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				25BD055B1B043D19008CFD03 /* ViewController.m in Sources */,
 				25BD05581B043D19008CFD03 /* AppDelegate.m in Sources */,
 				25BD05551B043D18008CFD03 /* main.m in Sources */,
+				252251891B156A28008E00F0 /* CheckinDataList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
