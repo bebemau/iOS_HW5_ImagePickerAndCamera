@@ -26,4 +26,10 @@
     return item;
 }
 
+-(CheckInData*)itemByName: (NSString*) placeName{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"placeName == %@", placeName];
+    NSArray *results = [self.checkinList filteredArrayUsingPredicate:predicate];
+    return [results firstObject];
+}
+
 @end

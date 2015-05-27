@@ -59,7 +59,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3J-TO-T8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5085" y="28"/>
+            <point key="canvasLocation" x="3515" y="-41"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lam-te-TqL">
@@ -77,7 +77,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLA-e9-goW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4274" y="28"/>
+            <point key="canvasLocation" x="2595" y="-63"/>
         </scene>
         <!--Find Location-->
         <scene sceneID="kS0-Wl-t4i">
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gN-U3-XuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3344" y="196"/>
+            <point key="canvasLocation" x="3287" y="650"/>
         </scene>
         <!--Check Ins-->
         <scene sceneID="Rqw-Tp-pah">
@@ -154,6 +154,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9NK-hp-EDx" id="rtR-Gz-9cP">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="x3S-fy-o3L" kind="presentation" identifier="ToCollectionViewController" id="WA0-19-LFc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -167,7 +170,7 @@
                     <navigationItem key="navigationItem" title="Check Ins" id="Tha-I4-F1z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3kg-HQ-OdO">
                             <connections>
-                                <segue destination="NM1-y4-fcd" kind="presentation" id="iLH-TE-flW"/>
+                                <segue destination="NM1-y4-fcd" kind="presentation" identifier="ToFindLocationController" id="iLH-TE-flW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -195,7 +198,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRE-mv-eZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573" y="213"/>
+            <point key="canvasLocation" x="2559" y="599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6ec-Hb-o8I">

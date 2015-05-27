@@ -45,12 +45,18 @@
     [super prepareForSegue:segue sender:sender];
     
     UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
-//    CollectionViewController *collectionViewController = (CollectionViewController *)navigationController.topViewController;
-//    collectionViewController.checkInData = self.checkinData;
-//    collectionViewController.delegate = self;
     
-    FindLocationViewController *vc = (FindLocationViewController *)navigationController.topViewController;
-    vc.delegate = self;
+    if([[segue identifier] isEqualToString:@"ToCollectionViewController"]){
+        UITableViewCell *cell = (UITableViewCell*)sender;
+        CheckInData *checkin = [self.checkinDataList itemByName:cell.textLabel.text];
+        CollectionViewController *collectionViewController = (CollectionViewController *)navigationController.topViewController;
+        collectionViewController.checkInData = checkin;
+        collectionViewController.delegate = self;
+    }
+    else{
+        FindLocationViewController *vc = (FindLocationViewController *)navigationController.topViewController;
+        vc.delegate = self;
+    }
 }
 
 
@@ -84,6 +90,10 @@
     
     return cell;
 }
+
+//- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+//    NSLog(@"asfd");
+//}
 
 
 -(void)collectionViewControllerImagesSelected:(CollectionViewController *)vc imagesSelected:(NSArray *)images{

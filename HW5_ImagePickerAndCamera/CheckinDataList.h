@@ -10,8 +10,11 @@
 #import "CheckInData.h"
 
 @interface CheckinDataList : NSObject
+
 @property (nonatomic, readwrite) NSMutableArray *checkinList;
 -(void)addCheckinList:(CheckInData *)checkIn;
 -(NSInteger)itemCount;
 -(CheckInData*)itemAtIndex: (NSInteger)index;
+-(CheckInData*)itemByName: (NSString*) placeName;
+
 @end
