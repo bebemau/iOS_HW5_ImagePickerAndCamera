@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CheckInData.h"
 
-@interface CheckinDataList : NSObject
+@interface CheckinDataList : NSObject<NSCoding>
 
 @property (nonatomic, readwrite) NSMutableArray *checkinList;
 -(void)addCheckinList:(CheckInData *)checkIn;

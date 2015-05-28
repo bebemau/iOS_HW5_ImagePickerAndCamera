@@ -10,6 +10,8 @@
 
 @implementation CheckinDataList
 
+static NSString *keyCheckinList = @"checkinListKey";
+
 -(void)addCheckinList:(CheckInData *)checkIn{
     if(self.checkinList == nil){
         self.checkinList = [[NSMutableArray alloc] init];
@@ -40,7 +42,19 @@
     }];
     
     [self.checkinList replaceObjectAtIndex:index withObject:checkIn];
-    //use replaceobjectatindex
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:self.checkinList forKey:keyCheckinList];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    if(self)
+    {
+        self.checkinList  = [aDecoder decodeObjectForKey:keyCheckinList];
+    }
+    return self;
 }
 
 @end

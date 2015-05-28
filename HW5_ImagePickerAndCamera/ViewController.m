@@ -90,7 +90,7 @@
     
     [self.checkinDataList updateCheckinList:checkinData];
     
-    //[NSKeyedArchiver archiveRootObject:self.checkinDataList toFile:[saveFileURL path]];
+    [NSKeyedArchiver archiveRootObject:self.checkinDataList toFile:[saveFileURL path]];
 }
 
 -(void)findLocationViewControllerPlaceSelected:(FindLocationViewController *)vc placeName:(NSString *)name{
