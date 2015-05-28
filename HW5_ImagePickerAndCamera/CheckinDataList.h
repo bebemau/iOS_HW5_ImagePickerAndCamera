@@ -16,5 +16,5 @@
 -(NSInteger)itemCount;
 -(CheckInData*)itemAtIndex: (NSInteger)index;
 -(CheckInData*)itemByName: (NSString*) placeName;
-
+-(void)updateCheckinList: (CheckInData *)checkIn;
 @end

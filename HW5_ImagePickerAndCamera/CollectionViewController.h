@@ -13,7 +13,7 @@
 
 @protocol CollectionViewControllerDelegate <NSObject>
 
-- (void)collectionViewControllerImagesSelected:(CollectionViewController *)vc imagesSelected:(NSArray *)images;
+- (void)collectionViewControllerImagesSelected:(CollectionViewController *)vc checkin:(CheckInData *)checkinData;
 
 @end
 

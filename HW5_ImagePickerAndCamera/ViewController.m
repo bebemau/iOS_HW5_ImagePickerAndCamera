@@ -29,14 +29,7 @@
     
     NSURL *saveFileURL = [self GetSaveFileUrl];
     self.checkinDataList = (CheckinDataList *)[NSKeyedUnarchiver unarchiveObjectWithFile:[saveFileURL path]];
-    
-//    if(self.checkinDataList == nil){
-//        self.checkinData = [[CheckInData alloc] init];
-//        self.checkinDataList = [[NSMutableArray alloc] init];
-//        [self.checkinDataList addObject:self.checkinData];
-//    }
-//    else
-//        self.checkinData = self.checkinDataList[0];
+
 }
 
 
@@ -91,16 +84,13 @@
     return cell;
 }
 
-//- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-//    NSLog(@"asfd");
-//}
 
-
--(void)collectionViewControllerImagesSelected:(CollectionViewController *)vc imagesSelected:(NSArray *)images{
+-(void)collectionViewControllerImagesSelected:(CollectionViewController *)vc checkin:(CheckInData *)checkinData{
     NSURL *saveFileURL = [self GetSaveFileUrl];
-    self.checkinData.pictures = [images mutableCopy];
     
-    [NSKeyedArchiver archiveRootObject:self.checkinDataList toFile:[saveFileURL path]];
+    [self.checkinDataList updateCheckinList:checkinData];
+    
+    //[NSKeyedArchiver archiveRootObject:self.checkinDataList toFile:[saveFileURL path]];
 }
 
 -(void)findLocationViewControllerPlaceSelected:(FindLocationViewController *)vc placeName:(NSString *)name{

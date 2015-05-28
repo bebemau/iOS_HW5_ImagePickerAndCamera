@@ -32,4 +32,15 @@
     return [results firstObject];
 }
 
+-(void)updateCheckinList: (CheckInData *)checkIn{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"placeName == %@", checkIn.placeName];
+    
+    NSInteger index = [self.checkinList indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        return [predicate evaluateWithObject:obj];
+    }];
+    
+    [self.checkinList replaceObjectAtIndex:index withObject:checkIn];
+    //use replaceobjectatindex
+}
+
 @end
